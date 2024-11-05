@@ -14,3 +14,7 @@ class UserInterface(ABC):
     @abstractmethod
     def DisplayBoard(self, board):
         pass
+
+    @abstractmethod
+    def SendMessage(self, msg):
+        pass

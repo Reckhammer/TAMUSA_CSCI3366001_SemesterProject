@@ -12,9 +12,9 @@ class TestUI(UserInterface):
                 if (0 <= row <= 2) and (0 <= col <= 2):
                     return row, col
                     
-                print("Input is out of range. Please enter values in range.")
+                self.SendMessage("Input is out of range. Please enter values in range.")
             except ValueError:
-                print("Invalid input. Please enter numbers only.")
+                self.SendMessage("Invalid input. Please enter numbers only.")
     
     def ValidatePlayerInput(self, input):
         return True
@@ -23,4 +23,7 @@ class TestUI(UserInterface):
         for row in board:
             print(" | ".join(row))
             print("-" * 10)
+    
+    def SendMessage(self, msg):
+        print(msg)
         
