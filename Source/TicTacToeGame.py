@@ -10,7 +10,7 @@ class TicTacToeGame:
         self.uiInterface = uiInterface
 
     def PlayGame(self):
-        print("Starting Tic Tac Toe Game!")
+        self.uiInterface.SendMessage("Starting Tic Tac Toe Game!")
         winner = None
         while self.turnCount < 9 and winner is None:
             self.DisplayBoard()
@@ -26,13 +26,13 @@ class TicTacToeGame:
                     winner = self.CheckWin()
                     break
                 else:
-                    print("Invalid move, please try again.")
+                    self.uiInterface.SendMessage("Invalid move, please try again.")
         
         self.DisplayBoard()
         if winner:
-            print(f"Player {winner} wins!")
+            self.uiInterface.SendMessage(f"Player {winner} wins!")
         else:
-            print("It's a tie!")
+            self.uiInterface.SendMessage("It's a tie!")
 
     def ValidateMove(self, row, col):
         # Check if the move is within bounds and if the cell is empty
