@@ -4,11 +4,11 @@ from abc import ABC, abstractmethod # allows for abstract methods
 
 class UserInterface(ABC):
     @abstractmethod
-    def GetPlayerInput(self, playerName):
+    def GetPlayerInput(self, row, col):
         pass
 
     @abstractmethod
-    def ValidatePlayerInput(self, input):
+    def ValidatePlayerInput(self, row, col):
         pass
 
     @abstractmethod
