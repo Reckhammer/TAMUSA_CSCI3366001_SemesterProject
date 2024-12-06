@@ -1,5 +1,5 @@
-from Source.TicTacToeGame import TicTacToeGame
-from Source.UserInterface import UserInterface
+from TicTacToeGame import TicTacToeGame
+from UserInterface import UserInterface
 
 
 class CommandLineInterface(UserInterface):
